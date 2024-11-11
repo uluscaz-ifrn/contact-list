@@ -29,7 +29,7 @@ const quantidadeDeContatos = computed(() => contatos.value.length)
     </form>
     <ul>
       <li v-for="(contato, idx) in contatos" :key="idx">
-        {{ contato.nome }} -
+        <p>{{ contato.nome }} -</p>
         <span :class="{ comprimento: contato.telefone.length > 10 }">{{ contato.telefone }}</span>
         <button @click="removerContato(idx)">Remover</button>
       </li>
@@ -60,6 +60,14 @@ main {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 400px;
+}
+
+p{
+  color: black;
+}
+
+span	{
+  color: black;
 }
 
 form {
